@@ -13,6 +13,7 @@ import { MatIconModule } from "@angular/material/icon";
 
 import { FooterComponent } from "./components/footer/footer.component";
 import { ReadAllComponent } from "./components/read-all/read-all.component";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ReadAllComponent } from "./components/read-all/read-all.component";
     MatCardModule,
     MatButtonModule,
     MatIconModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
