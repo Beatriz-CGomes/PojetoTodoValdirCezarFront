@@ -3,6 +3,18 @@
   margin: auto;
 }
 
+.badge {
+  margin-top: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.badge button {
+  margin: auto;
+  width: 100%;
+}
+
 .content {
   width: 100%;
 }
@@ -10,7 +22,7 @@
 mat-card {
   margin-top: 0.8rem;
   padding: 0.5rem;
-  box-shadow:  4px 4px 10px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2) !important;
 }
 
 .novo-todo {
