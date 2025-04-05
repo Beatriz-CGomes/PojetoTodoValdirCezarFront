@@ -10,10 +10,15 @@ import { MatSnackBar } from "@angular/material/snack-bar";
 })
 export class TodoService {
   baseUrl = environments.baseUrl;
-  constructor(private http: HttpClient, private snack: MatSnackBar) {}
+  constructor(private http: HttpClient, private snack: MatSnackBar) { }
 
   findAll(): Observable<Todo[]> {
     return this.http.get<Todo[]>(this.baseUrl);
+  }
+
+  findById(id: any): Observable<Todo> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.get<Todo>(url);
   }
 
   delete(id: any): Observable<void> {
@@ -29,13 +34,14 @@ export class TodoService {
     });
   }
 
+  create(todo: Todo): Observable<Todo> {
+    return this.http.post<Todo>(this.baseUrl, todo);
+  }
+
   update(todo: Todo): Observable<Todo> {
     const url = `${this.baseUrl}/${todo.id}`;
     return this.http.put<Todo>(url, todo);
   }
 
 
-  create(todo: Todo): Observable<Todo>{
-    return this.http.post<Todo>(this.baseUrl, todo);
-  }
 }
