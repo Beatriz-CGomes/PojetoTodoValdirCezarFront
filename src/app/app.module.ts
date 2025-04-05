@@ -21,6 +21,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { FinalizadosComponent } from "./components/finalizados/finalizados.component";
 import { CreateComponent } from "./components/create/create.component";
 import { MatNativeDateModule } from "@angular/material/core";
+import { UpdateComponent } from './components/update/update.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { MatNativeDateModule } from "@angular/material/core";
     ReadAllComponent,
     FinalizadosComponent,
     CreateComponent,
+    UpdateComponent,
   ],
   imports: [
     BrowserModule,
